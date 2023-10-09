@@ -1,0 +1,216 @@
+[gd_scene load_steps=4 format=3 uid="uid://derrps0v30pwm"]
+
+[ext_resource type="Script" path="res://addons/managed_memory_monitor/managed_memory_monitor.gd" id="1_uqop4"]
+[ext_resource type="Script" path="res://DebugTools/MemoryMonitor.cs" id="2_c6shs"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki0n8"]
+bg_color = Color(0, 0, 0, 0.25098)
+
+[node name="CanvasLayer" type="CanvasLayer"]
+process_mode = 3
+layer = 128
+
+[node name="Monitor" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 8.0
+offset_right = 268.0
+offset_bottom = 408.0
+size_flags_horizontal = 8
+size_flags_vertical = 4
+mouse_filter = 2
+script = ExtResource("1_uqop4")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Monitor"]
+layout_mode = 1
+offset_right = 180.0
+offset_bottom = 554.0
+mouse_filter = 2
+theme_override_constants/separation = 0
+
+[node name="Title" type="Label" parent="Monitor/VBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 18
+text = "Managed Memory"
+
+[node name="CollectionHistory" type="GridContainer" parent="Monitor/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 0
+mouse_filter = 2
+theme_override_constants/h_separation = 0
+theme_override_constants/v_separation = 0
+columns = 2
+
+[node name="CollectionsHeader" type="Label" parent="Monitor/VBoxContainer/CollectionHistory"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "Collections"
+horizontal_alignment = 2
+
+[node name="Spacer" type="Control" parent="Monitor/VBoxContainer/CollectionHistory"]
+custom_minimum_size = Vector2(40, 0)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Gen0Header" type="Label" parent="Monitor/VBoxContainer/CollectionHistory"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "Gen 0:"
+
+[node name="Gen0Value" type="Label" parent="Monitor/VBoxContainer/CollectionHistory"]
+modulate = Color(0, 1, 0, 1)
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 2
+
+[node name="Gen1Header" type="Label" parent="Monitor/VBoxContainer/CollectionHistory"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "Gen 1:"
+
+[node name="Gen1Value" type="Label" parent="Monitor/VBoxContainer/CollectionHistory"]
+modulate = Color(0, 1, 0, 1)
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 2
+
+[node name="Gen2Header" type="Label" parent="Monitor/VBoxContainer/CollectionHistory"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "Gen 2:"
+
+[node name="Gen2Value" type="Label" parent="Monitor/VBoxContainer/CollectionHistory"]
+modulate = Color(0, 1, 0, 1)
+custom_minimum_size = Vector2(25, 0)
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "0"
+horizontal_alignment = 2
+
+[node name="Spacer2" type="Control" parent="Monitor/VBoxContainer"]
+custom_minimum_size = Vector2(24, 16)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="GraphContainer" type="VBoxContainer" parent="Monitor/VBoxContainer"]
+layout_mode = 2
+
+[node name="Tick" type="VBoxContainer" parent="Monitor/VBoxContainer/GraphContainer"]
+layout_mode = 2
+
+[node name="TickGraph" type="HBoxContainer" parent="Monitor/VBoxContainer/GraphContainer/Tick"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="Monitor/VBoxContainer/GraphContainer/Tick/TickGraph"]
+custom_minimum_size = Vector2(120, 20)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "Tick Memory (B):"
+vertical_alignment = 1
+
+[node name="MaxTickValue" type="Label" parent="Monitor/VBoxContainer/GraphContainer/Tick"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="TickMemoryGraph" type="Panel" parent="Monitor/VBoxContainer/GraphContainer/Tick"]
+custom_minimum_size = Vector2(180, 64)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ki0n8")
+
+[node name="MinTickValue" type="Label" parent="Monitor/VBoxContainer/GraphContainer/Tick"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "0
+"
+
+[node name="Total" type="VBoxContainer" parent="Monitor/VBoxContainer/GraphContainer"]
+layout_mode = 2
+
+[node name="TotalGraph" type="HBoxContainer" parent="Monitor/VBoxContainer/GraphContainer/Total"]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="Title" type="Label" parent="Monitor/VBoxContainer/GraphContainer/Total/TotalGraph"]
+custom_minimum_size = Vector2(120, 20)
+layout_mode = 2
+size_flags_horizontal = 8
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "Total Memory (MB):"
+vertical_alignment = 1
+
+[node name="MaxTotalValue" type="Label" parent="Monitor/VBoxContainer/GraphContainer/Total"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "0"
+
+[node name="TotalMemoryGraph" type="Panel" parent="Monitor/VBoxContainer/GraphContainer/Total"]
+custom_minimum_size = Vector2(180, 64)
+layout_mode = 2
+size_flags_vertical = 0
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ki0n8")
+
+[node name="MinTotalValue" type="Label" parent="Monitor/VBoxContainer/GraphContainer/Total"]
+custom_minimum_size = Vector2(50, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.501961, 0.501961, 0.501961, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 12
+text = "0
+"
+
+[node name="ManagedBridge" type="Node" parent="."]
+script = ExtResource("2_c6shs")
+
+[connection signal="visibility_changed" from="Monitor" to="Monitor" method="_on_visibility_changed"]

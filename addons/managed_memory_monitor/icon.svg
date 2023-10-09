@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="512"
+   height="512"
+   viewBox="0 0 135.46667 135.46667"
+   version="1.1"
+   id="svg5"
+   inkscape:version="1.2.1 (9c6d41e410, 2022-07-14)"
+   sodipodi:docname="icon.svg"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview7"
+     pagecolor="#505050"
+     bordercolor="#ffffff"
+     borderopacity="1"
+     inkscape:showpageshadow="0"
+     inkscape:pageopacity="0"
+     inkscape:pagecheckerboard="1"
+     inkscape:deskcolor="#505050"
+     inkscape:document-units="mm"
+     showgrid="false"
+     showguides="false"
+     inkscape:zoom="0.73851712"
+     inkscape:cx="317.52819"
+     inkscape:cy="236.96133"
+     inkscape:window-width="1920"
+     inkscape:window-height="1009"
+     inkscape:window-x="1912"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="layer1" />
+  <defs
+     id="defs2" />
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="opacity:0.722561;fill:#ffff00;stroke-width:1.56166"
+       id="rect234"
+       width="24.341667"
+       height="32"
+       x="8.0268393"
+       y="-132"
+       transform="scale(1,-1)" />
+    <rect
+       style="opacity:0.722561;fill:#00ff00;stroke-width:2.00395"
+       id="rect236"
+       width="24.341667"
+       height="64"
+       x="39.717278"
+       y="-132"
+       transform="scale(1,-1)" />
+    <rect
+       style="opacity:0.722561;fill:#ff0000;stroke-width:2.4091"
+       id="rect238"
+       width="24.341667"
+       height="92"
+       x="71.407722"
+       y="-132"
+       transform="scale(1,-1)" />
+    <rect
+       style="opacity:0.722561;fill:#00ffff;stroke-width:2.59712"
+       id="rect240"
+       width="24.341667"
+       height="128"
+       x="103.09816"
+       y="-132"
+       transform="scale(1,-1)" />
+  </g>
+</svg>
