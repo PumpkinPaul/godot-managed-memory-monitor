@@ -23,7 +23,7 @@ Can be used when running from the editor and in exported projects.
 - Navigate to the **AssetLib** tab at the top of the editor and search for
   "managed memory monitor".
 - Install the
-  [*Managed Memory Monitor*](https://godotengine.org/asset-library/asset/TODO_FIX_ME)
+  [*Managed Memory Monitor*](https://godotengine.org/asset-library/asset/2239)
   plugin. Keep all files checked during installation.
 - In the editor, open **Project > Project Settings**, go to **Plugins**
   and enable the **Managed Memory Monitor** plugin.
