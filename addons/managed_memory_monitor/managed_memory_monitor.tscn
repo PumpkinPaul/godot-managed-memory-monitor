@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://derrps0v30pwm"]
 
 [ext_resource type="Script" path="res://addons/managed_memory_monitor/managed_memory_monitor.gd" id="1_uqop4"]
-[ext_resource type="Script" path="res://DebugTools/MemoryMonitor.cs" id="2_c6shs"]
+[ext_resource type="Script" path="res://addons/managed_memory_monitor/MemoryMonitor.cs" id="2_c6shs"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ki0n8"]
 bg_color = Color(0, 0, 0, 0.25098)
